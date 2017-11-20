@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>%单位的相对性</title>
+	<style>
+		.outer {
+			width: 300px;
+			height: 400px;
+			background-color: yellowgreen;
+		}
+
+		.inner {
+			width: 10%;
+			height: 10%;
+			background-color: greenyellow;
+
+			/* 如果给子元素margin 百分比这样的单位 相对于父元素的宽 */
+			margin: 10%;
+			/* 如果给子元素padding 百分比这样的单位 相对于父元素的宽  */
+			padding: 10%;
+
+			/* 如果给子元素padding 百分比这样的单位 不能为border 会报错为非法的属性值 */
+			border: 1% solid #ccc;
+		}
+	</style>
+</head>
+<body>
+	<div class="outer">
+		<div class="inner"></div>
+	</div>
+</body>
+</html>
